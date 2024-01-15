@@ -2,12 +2,11 @@ const mongoose = require('mongoose');
 const express = require('express');
 
 const personnelRoute = require('./routes/personnelRoute');
-
+const app = express();
 //Connect to DB
 mongoose.connect('mongodb://localhost:27017/workplace').then(() => console.log('DB Connected Successfully'))
 
 //-----------------------------------------------
-const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 //-----------------------------------------------
