@@ -34,14 +34,14 @@ exports.deletePersonnels = async (req, res) => {
     if (!deletedPersonnel) {
       return res.status(404).json({
         status: "fail",
-        message: "Document not found.",
+        message: "Document not found...",
       });
     }
     res.status(200).json({
       status: "success",
       data: deletedPersonnel,
     });
-    console.log("Information has been deleted.");
+    console.log("Information has been deleted...");
   } catch (error) {
     res.status(400).json({
       status: "fail",
